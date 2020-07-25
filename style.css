@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #423940;
+    padding: 0px 15px;
+    z-index: 10;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+header .navbar ul li a {
+    font-size: 25px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    position: relative;
+}
+
+header .navbar ul li a::before {
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+
+header .navbar ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+header .navbar ul li a.active::before {
+    width: 100%;
+    left: 0;
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url(2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+
+.home .row {
+    min-height: 100vh;
+}
+
+.home .home-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home .home-content .block {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 35px;
+    border-left: 5px solid #ffffff;
+    margin-top: 200px;
+    margin-left: 80px;
+}
+
+.home .home-content .block h6 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content .block h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content .block h3 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content .block .btn {
+    padding-top: 20px;
+}
+
+.home .home-content .block .btn a {
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+
+.home .home-content .block .btn a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Start of About me  */
+
+.aboutMe {
+    background-color: #ffffff;
+    color: #2C2C2C;
+    display: block;
+    position: relative;
+    padding: 20px;
+    text-transform: initial;
+}
+
+.aboutMe h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.aboutMe h3 {
+    font-size: 35px;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.aboutMe h3 span {
+    color: red
+}
+
+.aboutMe p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    padding-bottom: 50px;
+}
+
+.row .column p {
+    border-bottom: 1px solid #bdb5b5;
+    padding: 6px;
+    font-weight: 500;
+}
+
+.row .column p span {
+    font-weight: bold;
+}
+
+.aboutDBtn,
+.aboutHBtn {
+    border-radius: 8px;
+    color: #FAC70C;
+    border: 1px solid #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-weight: bold;
+    transition: all .5s ease;
+    background-color: red;
+    font-family: 'Amatic SC';
+    margin-left: 50px;
+}
+
+.aboutBtn {
+    margin-left: 280px;
+    padding-top: 100px;
+}
+
+
+/* End of About me  */
+
+
+/* Start Skills  */
+
+.skills h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.skills h3 {
+    font-size: 40px;
+    font-weight: 600;
+    font-weight: bold;
+    color: orangered;
+}
+
+.skills img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.skills .professionalSkills img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.skills .professionalSkills {
+    margin-left: 200px;
+}
+
+.skills .personalSkills {
+    margin-left: 50px;
+}
+
+
+/* End Skills  */
+
+
+/* Start Studies  */
+
+.studies strong {
+    color: #FAC70C;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.studies value {
+    font-size: 25px;
+    font-weight: bold
+}
+
+.studies p {
+    font-size: 20px;
+}
+
+
+/* End Studies */
+
+
+/* Start Portofolio  */
+
+.portofolioColumns {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: auto;
+    align-content: center;
+}
+
+.portofolioColumns h5 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.portofolio .column .git {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+}
+
+.portofolio .column img {
+    width: 250px;
+    height: 150px;
+}
+
+.portofolio .column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    padding-bottom: 50px;
+}
+
+
+/* End Portofolio  */
+
+
+/* Start Contact  */
+
+.contactMeColumns {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: auto;
+}
+
+.contactMe h1 {
+    color: #E30B1A;
+}
+
+.contactMe .column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.contactMe .column span p {
+    font-weight: bold;
+}
+
+
+/* End Contact  */
+
+
+/* Start Footer  */
+
+footer {
+    background-color: #555;
+    color: transparent;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    width: 100%;
+    color: #FAC70C;
+}
+
+.ftSocial {
+    align-self: center;
+}
+
+.ftSocialList {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.ftSocialList li {
+    margin: 8px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+
+/* End Footer  */
+
+.contactMe #upContact,
+.skills #upSkills,
+.studies #upStudies,
+.row #upAbout,
+.portofolio #upPortofolio {
+    width: 20px;
+    height: 20px;
+}
