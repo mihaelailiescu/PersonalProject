@@ -3,26 +3,32 @@ function goToContactMe() {
     contact.scrollIntoView();
 }
 
-function scroll(containerId, a, b) {
-    let container = document.getElementById(containerId);
-    container.addEventListener('click', ev => {
+
+function scroll(hrefId, containerId) {
+    let href = document.getElementById(hrefId);
+    href.addEventListener('click', ev => {
         ev.preventDefault();
-        document.documentElement.scrollTo(a, b);
+
+        let container = document.getElementById(containerId);
+        let rect = container.getBoundingClientRect();
+        document.documentElement.scrollTo(rect.left, rect.top);
     })
 }
 
-scroll("about", 300, 620);
-scroll("hobbies", 900, 1200);
-scroll("skills", 1210, 1600);
-scroll("studies", 1900, 2450);
-scroll("portofolio", 2500, 3000);
-scroll("contact", 3010, 3400);
-scroll("upAbout", 0, 0);
-scroll("upSkills", 0, 0);
-scroll("upStudies", 0, 0);
-scroll("upPortofolio", 0, 0);
-scroll("upContact", 0, 0);
-scroll("upHobbies", 0, 0);
+
+scroll("about", "aboutContainer");
+scroll("studies", "studiesContainer");
+scroll("skills", "skillsContainer");
+scroll("portofolio", "portofolioContainer");
+scroll("hobbies", "hobbiesContainer");
+scroll("contact", "contactMe");
+scroll("upAbout", "containerHeader");
+scroll("upSkills", "containerHeader");
+scroll("upStudies", "containerHeader");
+scroll("upPortofolio", "containerHeader");
+scroll("upContact", "containerHeader");
+scroll("upHobbies", "containerHeader");
+
 
 function downloadMyCV(downloadBtn) {
     let button = document.getElementById(downloadBtn);

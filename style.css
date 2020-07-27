@@ -78,12 +78,13 @@ header .navbar ul li a.active::before {
 }
 
 
-/* .row img {
-    background-image: url(2.jpg);
+/* .background img {
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     padding: 15px;
+    width: 100%;
+    height: 350px;
 } */
 
 .home .row {

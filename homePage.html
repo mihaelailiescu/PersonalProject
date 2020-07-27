@@ -14,17 +14,18 @@
 <body>
 
     <!-- Start Header -->
+
     <header>
-        <div class="container">
+        <div class="container" id="containerHeader">
             <!-- <div class="row1"> -->
             <div class="navbar">
                 <ul>
                     <li><a href="" class="active">Home</a> </li>
                     <li><a href="" id="about">About</a> </li>
-                    <li><a href="" id="hobbies">Hobbies</a> </li>
-                    <li><a href="" id="skills">Skills</a> </li>
                     <li><a href="" id="studies">Studies</a> </li>
+                    <li><a href="" id="skills">Skills</a> </li>
                     <li><a href="" id="portofolio">Portofolio</a> </li>
+                    <li><a href="" id="hobbies">Hobbies</a> </li>
                     <li><a href="" id="contact">Contact</a> </li>
                 </ul>
             </div>
@@ -57,13 +58,13 @@
     <!-- End Home  -->
 
     <!-- Start About me  -->
-    <div class="aboutMe">
+    <div class="aboutMe" id="aboutContainer">
         <h1>About Me</h1>
         <br></br>
         <div class="aboutText">
-            <h3>I'm Mihaela Iliescu and <span>Web Developer</span></h3> <br>
-            <p>I am currently working as a Marketing Specialist based in Cluj-Napoca. I am a new passionate web developer, who likes creating new applications, is curious and very exited to work on this field. I always look forward to improve myself and
-                learn something new. Currently looking to take the extra out of the ordinary and work on Web Development field.
+            <h3>I am Mihaela Iliescu and <span>Web Developer</span></h3> <br>
+            <p>I am currently working as a Marketing Specialist based in Cluj-Napoca. I am a new passionate web developer, who likes creating new applications, is curious and very excited to work in this field. I am always looking forward to improve myself
+                and learn something new. I am currently looking to take the extra out of the ordinary and work on Web Development field.
             </p>
         </div>
         <br>
@@ -89,53 +90,6 @@
         </div>
         <br></br>
         <!-- End About me  -->
-
-
-        <!-- Start Hobbies -->
-        <div class="hobbies">
-            <h1>Hobbies</h1>
-            <br></br>
-
-            <div class="hobbiesContainer">
-                <img src="cooking.PNG">
-                <img src="movies.PNG">
-                <img src="music.PNG">
-                <img src="photography.PNG">
-                <img src="wsimming.PNG">
-            </div>
-            <br></br>
-            <img src="up.png" id="upHobbies">
-        </div>
-        <br></br>
-        <!-- End Hobbies -->
-
-
-        <!-- Start Skills  -->
-        <div class="skills">
-            <h1>Skills</h1>
-            <br></br>
-            <h3>Professional Skills</h3>
-            <br></br>
-            <div class="professionalSkills">
-                <img src="html1.PNG">
-                <img src="css1.PNG">
-                <img src="js1.PNG">
-            </div>
-            <br></br>
-            <h3>Personal Skills</h3>
-            <br></br>
-            <div class="personalSkills">
-                <img src="empathy.PNG">
-                <img src="motivation.PNG">
-                <img src="timeManagement.PNG">
-                <img src="comunication.PNG">
-                <img src="creativity.PNG">
-            </div>
-            <br></br>
-            <img src="up.png" id="upSkills">
-        </div>
-        <br></br>
-        <!-- End Skills  -->
 
         <!-- Start Studies  -->
         <div class="studies" id="studiesContainer">
@@ -168,6 +122,32 @@
         <br></br>
         <!-- End Studies  -->
 
+        <!-- Start Skills  -->
+        <div class="skills" id="skillsContainer">
+            <h1>Skills</h1>
+            <br></br>
+            <h3>Professional Skills</h3>
+            <br></br>
+            <div class="professionalSkills">
+                <img src="html1.PNG">
+                <img src="css1.PNG">
+                <img src="js1.PNG">
+            </div>
+            <br></br>
+            <h3>Personal Skills</h3>
+            <br></br>
+            <div class="personalSkills">
+                <img src="empathy.PNG">
+                <img src="motivation.PNG">
+                <img src="timeManagement.PNG">
+                <img src="comunication.PNG">
+                <img src="creativity.PNG">
+            </div>
+            <br></br>
+            <img src="up.png" id="upSkills">
+        </div>
+        <br></br>
+        <!-- End Skills  -->
 
         <!-- start portofolio  -->
         <div class="portofolio" id="portofolioContainer">
@@ -201,6 +181,23 @@
         <br></br>
         <!-- end portofolio  -->
 
+        <!-- Start Hobbies -->
+        <div class="hobbies" id="hobbiesContainer">
+            <h1>Hobbies</h1>
+            <br></br>
+
+            <div class="hobbiesContainer">
+                <img src="cooking.PNG">
+                <img src="movies.PNG">
+                <img src="music.PNG">
+                <img src="photography.PNG">
+                <img src="wsimming.PNG">
+            </div>
+            <br></br>
+            <img src="up.png" id="upHobbies">
+        </div>
+        <br></br>
+        <!-- End Hobbies -->
 
         <!-- Start contact  -->
         <div class="contactMe" id="contactMe">
@@ -217,7 +214,7 @@
                 <div class="column">
                     <i class="fas fa-paper-plane" onclick=goToGmail()></i>
                     <span> <p> Mail me:</p></span>
-                    <p onclick=goToGmail()>mihaela.iliescu1708@yahoo.com</p>
+                    <p onclick=goToGmail()><a href="#"> mihaela.iliescu1708@yahoo.com</a></p>
 
                 </div>
 
