@@ -71,11 +71,20 @@ header .navbar ul li a.active::before {
 
 .home {
     min-height: 100vh;
-    background-image: url(2.jpg);
+    background-image: url(3.jpg);
     background-size: cover;
     background-position: center;
     padding: 15px;
 }
+
+
+/* .row img {
+    background-image: url(2.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+} */
 
 .home .row {
     min-height: 100vh;
@@ -176,6 +185,7 @@ header .navbar ul li a.active::before {
 .aboutMe p {
     font-size: 20px;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .column {
@@ -189,6 +199,7 @@ header .navbar ul li a.active::before {
     border-bottom: 1px solid #bdb5b5;
     padding: 6px;
     font-weight: 500;
+    font-family: 'Amatic SC', cursive;
 }
 
 .row .column p span {
@@ -222,6 +233,25 @@ header .navbar ul li a.active::before {
 /* End of About me  */
 
 
+/* Start Hobbies  */
+
+.hobbies h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.hobbiesContainer img {
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+    margin-left: 40px;
+}
+
+
+/* End Hobbies  */
+
+
 /* Start Skills  */
 
 .skills h1 {
@@ -238,8 +268,8 @@ header .navbar ul li a.active::before {
 }
 
 .skills img {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 15px;
     margin-left: 20px;
 }
@@ -331,6 +361,7 @@ header .navbar ul li a.active::before {
     flex-flow: row wrap;
     justify-content: center;
     flex-basis: auto;
+    font-family: 'Amatic SC', cursive;
 }
 
 .contactMe h1 {
@@ -345,8 +376,13 @@ header .navbar ul li a.active::before {
     align-items: center;
 }
 
+.contactMe .column p {
+    font-family: 'Amatic SC', cursive;
+}
+
 .contactMe .column span p {
     font-weight: bold;
+    font-family: 'Amatic SC', cursive;
 }
 
 
@@ -363,7 +399,6 @@ footer {
 
 footer a {
     text-decoration: none;
-    width: 100%;
     color: #FAC70C;
 }
 
@@ -390,7 +425,8 @@ footer a {
 .skills #upSkills,
 .studies #upStudies,
 .row #upAbout,
-.portofolio #upPortofolio {
+.portofolio #upPortofolio,
+.hobbies #upHobbies {
     width: 20px;
     height: 20px;
 }

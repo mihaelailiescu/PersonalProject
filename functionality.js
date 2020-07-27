@@ -10,18 +10,19 @@ function scroll(containerId, a, b) {
         document.documentElement.scrollTo(a, b);
     })
 }
+
 scroll("about", 300, 620);
-scroll("skills", 900, 1200);
-scroll("studies", 1400, 1950);
-scroll("portofolio", 2000, 2450);
-scroll("contact", 2500, 2900);
+scroll("hobbies", 900, 1200);
+scroll("skills", 1210, 1600);
+scroll("studies", 1900, 2450);
+scroll("portofolio", 2500, 3000);
+scroll("contact", 3010, 3400);
 scroll("upAbout", 0, 0);
 scroll("upSkills", 0, 0);
 scroll("upStudies", 0, 0);
 scroll("upPortofolio", 0, 0);
 scroll("upContact", 0, 0);
-
-
+scroll("upHobbies", 0, 0);
 
 function downloadMyCV(downloadBtn) {
     let button = document.getElementById(downloadBtn);
@@ -34,3 +35,8 @@ function downloadMyCV(downloadBtn) {
 
 downloadMyCV("downloadBtn");
 downloadMyCV("aboutDBtn");
+
+function goToGmail() {
+    location.href = "mailto:mihaela.iliescu1708@yahoo.com&body=Hello!";
+    window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
+}

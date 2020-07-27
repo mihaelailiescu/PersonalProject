@@ -7,6 +7,7 @@
     <title>My CV</title>
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 
@@ -20,6 +21,7 @@
                 <ul>
                     <li><a href="" class="active">Home</a> </li>
                     <li><a href="" id="about">About</a> </li>
+                    <li><a href="" id="hobbies">Hobbies</a> </li>
                     <li><a href="" id="skills">Skills</a> </li>
                     <li><a href="" id="studies">Studies</a> </li>
                     <li><a href="" id="portofolio">Portofolio</a> </li>
@@ -44,7 +46,9 @@
                         <div class="btn">
                             <a href="" id="downloadBtn">Download CV</a>
                         </div>
+
                     </div>
+                    <!-- <img src="2.jpg"> -->
                 </div>
             </div>
         </div>
@@ -58,8 +62,8 @@
         <br></br>
         <div class="aboutText">
             <h3>I'm Mihaela Iliescu and <span>Web Developer</span></h3> <br>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                book.
+            <p>I am currently working as a Marketing Specialist based in Cluj-Napoca. I am a new passionate web developer, who likes creating new applications, is curious and very exited to work on this field. I always look forward to improve myself and
+                learn something new. Currently looking to take the extra out of the ordinary and work on Web Development field.
             </p>
         </div>
         <br>
@@ -86,6 +90,26 @@
         <br></br>
         <!-- End About me  -->
 
+
+        <!-- Start Hobbies -->
+        <div class="hobbies">
+            <h1>Hobbies</h1>
+            <br></br>
+
+            <div class="hobbiesContainer">
+                <img src="cooking.PNG">
+                <img src="movies.PNG">
+                <img src="music.PNG">
+                <img src="photography.PNG">
+                <img src="wsimming.PNG">
+            </div>
+            <br></br>
+            <img src="up.png" id="upHobbies">
+        </div>
+        <br></br>
+        <!-- End Hobbies -->
+
+
         <!-- Start Skills  -->
         <div class="skills">
             <h1>Skills</h1>
@@ -93,19 +117,19 @@
             <h3>Professional Skills</h3>
             <br></br>
             <div class="professionalSkills">
-                <img src="html.PNG">
-                <img src="css.PNG">
-                <img src="js.PNG">
+                <img src="html1.PNG">
+                <img src="css1.PNG">
+                <img src="js1.PNG">
             </div>
             <br></br>
             <h3>Personal Skills</h3>
             <br></br>
             <div class="personalSkills">
                 <img src="empathy.PNG">
-                <img src="positive.PNG">
-                <img src="responsability.PNG">
-                <img src="teamWork.PNG">
+                <img src="motivation.PNG">
                 <img src="timeManagement.PNG">
+                <img src="comunication.PNG">
+                <img src="creativity.PNG">
             </div>
             <br></br>
             <img src="up.png" id="upSkills">
@@ -114,7 +138,7 @@
         <!-- End Skills  -->
 
         <!-- Start Studies  -->
-        <div class="studies">
+        <div class="studies" id="studiesContainer">
             <h1>Studies</h1>
             <br>
             <strong><key>The Informal School of IT - Web Development</key></strong>
@@ -127,6 +151,8 @@
             <p>- OOP: encapsulation, inheritance, polymorphism.</p>
             <p> - ES6: scoping, let, const, async/await, arrow functions, classes, static class methods, destructuring.</p>
             <p> - GIT: basic commands.</p>
+            <p>- Team project: built the front-end part of an IMBD-like application (using a provided API), with the following functionalities: CRUD operations on movies, basic search, pagination, registration and login; we've used GitHub for code version
+                and Asana for the project management part.</p>
             <br></br>
 
             <div>
@@ -144,7 +170,7 @@
 
 
         <!-- start portofolio  -->
-        <div class="portofolio">
+        <div class="portofolio" id="portofolioContainer">
             <h1>Portofolio</h1>
             <br>
             <div class="portofolioColumns">
@@ -189,16 +215,18 @@
                 </div>
 
                 <div class="column">
-                    <i class="fas fa-paper-plane"></i>
+                    <i class="fas fa-paper-plane" onclick=goToGmail()></i>
                     <span> <p> Mail me:</p></span>
-                    <p>mihaela.iliescu1708@yahoo.com</p>
+                    <p onclick=goToGmail()>mihaela.iliescu1708@yahoo.com</p>
 
                 </div>
 
                 <div class="column">
                     <a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/"><i class="fab fa-linkedin"></i></a></li>
                     <span>  <p>See my LinkedIn profile:</p></span>
-                    <p>Mihaela Marilena Iliescu</p>
+                    <a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/">
+                        <p>Mihaela Marilena Iliescu</p>
+                    </a>
                 </div>
             </div>
             <img src="up.png" id="upContact">
