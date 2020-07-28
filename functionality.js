@@ -46,3 +46,5 @@ function goToGmail() {
     location.href = "mailto:mihaela.iliescu1708@yahoo.com&body=Hello!";
     window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
 }
+
+var scroll = new SmoothScroll('a[href*="#"]');

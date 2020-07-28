@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Amatic SC', cursive;
@@ -71,21 +75,11 @@ header .navbar ul li a.active::before {
 
 .home {
     min-height: 100vh;
-    background-image: url(3.jpg);
+    background-image: url(assets/3.jpg);
     background-size: cover;
     background-position: center;
     padding: 15px;
 }
-
-
-/* .background img {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    padding: 15px;
-    width: 100%;
-    height: 350px;
-} */
 
 .home .row {
     min-height: 100vh;
@@ -151,15 +145,17 @@ header .navbar ul li a.active::before {
 }
 
 .home .home-content .block .btn a:hover {
-    background-color: #ffffff;
+    background-color: red;
     color: #000000;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
 }
 
 
 /* Start of About me  */
 
 .aboutMe {
-    background-color: #ffffff;
+    background-color: lavenderblush;
     color: #2C2C2C;
     display: block;
     position: relative;
@@ -171,6 +167,10 @@ header .navbar ul li a.active::before {
     font-size: 60px;
     font-weight: 600;
     font-weight: bold;
+    animation-name: example;
+    animation-duration: 4s;
+    animation: backInLeft;
+    animation-duration: 3.5s;
 }
 
 .aboutMe h3 {
@@ -207,27 +207,129 @@ header .navbar ul li a.active::before {
     font-weight: bold;
 }
 
-.aboutDBtn,
-.aboutHBtn {
-    border-radius: 8px;
-    color: #FAC70C;
-    border: 1px solid #ffffff;
-    padding: 15px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-weight: bold;
-    transition: all .5s ease;
-    background-color: red;
-    font-family: 'Amatic SC';
-    margin-left: 50px;
-}
-
 .aboutBtn {
     margin-left: 280px;
     padding-top: 100px;
+}
+
+.aboutDBtn,
+.aboutHBtn {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.aboutHBtn {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.aboutHBtn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.1, 1);
+}
+
+.aboutHBtn:hover span {
+    letter-spacing: 2px;
+}
+
+.aboutHBtn:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.aboutHBtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+.aboutHBtn:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+.aboutDBtn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.aboutDBtn:active {
+    color: #000
+}
+
+.aboutDBtn:active:after {
+    background: transparent;
+}
+
+.aboutDBtn:hover:before {
+    opacity: 1;
+}
+
+.aboutDBtn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
 
@@ -273,6 +375,16 @@ header .navbar ul li a.active::before {
     height: 170px;
     border-radius: 15px;
     margin-left: 20px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.skills img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .skills .professionalSkills img {
@@ -369,6 +481,48 @@ header .navbar ul li a.active::before {
     color: #E30B1A;
 }
 
+.contactMe h1 {
+    margin: 0;
+    font-size: 80px;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-shadow: 0 0.1em 20px rgb(248, 244, 18), 0.05em -0.03em 0 rgb(248, 244, 18), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+.contactMe h1 span {
+    transform: scale(0.9);
+    display: inline-block;
+}
+
+span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+span:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    50%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bopB {
+    0% {
+        transform: scale(0.9);
+    }
+    80%,
+    100% {
+        transform: scale(1) rotateZ(-3deg);
+    }
+}
+
 .contactMe .column {
     float: left;
     width: 30%;
@@ -428,6 +582,20 @@ footer a {
 .row #upAbout,
 .portofolio #upPortofolio,
 .hobbies #upHobbies {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: #FAC70C;
+    border-radius: 23px;
+    /* animation: upBtns 8s infinite; */
+    /* animation-duration: 8s; */
 }
+
+
+/* @keyframes upBtns {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 100px;
+    }
+} */
