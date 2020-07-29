@@ -196,14 +196,14 @@ header .navbar ul li a.active::before {
     padding-bottom: 50px;
 }
 
-.row .column p {
+.row2 .column p {
     border-bottom: 1px solid #bdb5b5;
     padding: 6px;
     font-weight: 500;
     font-family: 'Amatic SC', cursive;
 }
 
-.row .column p span {
+.row2 .column p span {
     font-weight: bold;
 }
 
@@ -351,6 +351,25 @@ header .navbar ul li a.active::before {
     margin-left: 40px;
 }
 
+.hobbiesContainer img {
+    transform: scale(0.9);
+    display: inline-block;
+}
+
+.hobbiesContainer img {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    80%,
+    100% {
+        transform: scale(1) rotateZ(-3deg);
+    }
+}
+
 
 /* End Hobbies  */
 
@@ -455,6 +474,12 @@ header .navbar ul li a.active::before {
     height: 150px;
 }
 
+.portofolio .column img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 .portofolio .column {
     float: left;
     width: 30%;
@@ -487,10 +512,20 @@ header .navbar ul li a.active::before {
     padding: 0;
     font-family: 'Amatic SC', cursive;
     color: white;
-    text-shadow: 0 0.1em 20px rgb(248, 244, 18), 0.05em -0.03em 0 rgb(248, 244, 18), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+    text-shadow: 0 0.1em 20px rgb(194, 191, 3), 0.05em -0.03em 0 rgb(167, 164, 5), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
 }
 
-.contactMe h1 span {
+.portofolio h4 {
+    margin: 0;
+    font-size: 30px;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-shadow: 0 0.1em 20px rgb(194, 191, 3), 0.05em -0.03em 0 rgb(167, 164, 5), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+.contactMe h1 span,
+.portofolio h4 span {
     transform: scale(0.9);
     display: inline-block;
 }
@@ -540,6 +575,54 @@ span:last-child {
     font-family: 'Amatic SC', cursive;
 }
 
+.arrowContact,
+.arrowHobbies,
+.arrowPortofolio,
+.arrowSkills,
+.arrowStudies,
+.arrowAbout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.arrowContact img,
+.arrowHobbies img,
+.arrowPortofolio img,
+.arrowSkills img,
+.arrowStudies img,
+.arrowAbout img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    animation-name: ball-bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+    background-color: rgba(197, 239, 247, 1);
+    animation-delay: 0.5s;
+}
+
+@keyframes ball-bounce {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(0px, 10px);
+    }
+    50% {
+        transform: translate(0, 20px);
+    }
+    70% {
+        transform: translate(0px, 30px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
 
 /* End Contact  */
 
@@ -579,23 +662,141 @@ footer a {
 .contactMe #upContact,
 .skills #upSkills,
 .studies #upStudies,
-.row #upAbout,
+.row2 #upAbout,
 .portofolio #upPortofolio,
 .hobbies #upHobbies {
     width: 35px;
     height: 35px;
     background-color: #FAC70C;
     border-radius: 23px;
-    /* animation: upBtns 8s infinite; */
-    /* animation-duration: 8s; */
 }
 
 
-/* @keyframes upBtns {
-    from {
-        top: 0px;
+/* Start responsive  */
+
+@media screen and (max-width:1024px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
     }
-    to {
-        top: 100px;
+    .portofolioColumns,
+    .contactMe .contactMeColumns {
+        display: flex;
+        font-size: 20px;
+        flex-direction: column;
+        flex-basis: auto;
+        align-content: flex-start;
     }
-} */
+    .contactMe .contactMeColumns .column p {
+        font-size: 30px;
+    }
+    .hobbies .hobbiesContainer img {
+        width: 130px;
+        height: 130px;
+    }
+    .skills .professionalSkills {
+        margin-left: 0px;
+    }
+    .skills .personalSkills img {
+        margin-left: 0px;
+        width: 160px;
+        height: 160px;
+    }
+    .aboutBtn {
+        margin-left: 0px;
+        padding-top: 100px;
+    }
+    .aboutMe p {
+        margin-left: 0px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .aboutText p {
+        font-size: 11px;
+        font-weight: 300;
+    }
+    header .navbar ul li a {
+        color: black;
+    }
+    header {
+        width: 100%;
+        background-color: #555;
+    }
+}
+
+@media screen and (max-width:400px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .portofolioColumns,
+    .contactMe .contactMeColumns {
+        display: flex;
+        font-size: 20px;
+        flex-direction: column;
+        flex-basis: auto;
+        align-content: flex-start;
+    }
+    .contactMe .contactMeColumns .column p {
+        font-size: 15px;
+    }
+    .hobbies .hobbiesContainer img {
+        width: 130px;
+        height: 130px;
+    }
+    .skills .professionalSkills {
+        margin-left: 0px;
+    }
+    .skills .personalSkills img {
+        margin-left: 0px;
+        width: 160px;
+        height: 160px;
+    }
+    .aboutBtn {
+        margin-left: 0px;
+        padding-top: 100px;
+    }
+    .aboutMe p {
+        margin-left: 0px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .aboutText p {
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .home .home-content .block {
+        margin-top: 650px;
+        margin-left: 30px;
+        border-left: 5px solid black;
+    }
+    .home .home-content .block h6 {
+        color: black;
+        font-weight: 800;
+        font-size: 25px;
+    }
+    .home .home-content .block h1 {
+        color: black;
+        font-size: 50px;
+    }
+    .home .home-content .block h3 {
+        color: black;
+        font-weight: 900;
+        font-size: 30px;
+    }
+    .home .home-content .block .btn a {
+        border-radius: 4px;
+        color: black;
+        border: 1px solid black;
+    }
+    header .navbar ul li a {
+        color: black;
+    }
+    header {
+        width: 100%;
+        background-color: #555;
+    }
+}
+
+
+/* End responsive  */

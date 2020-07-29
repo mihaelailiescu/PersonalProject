@@ -3,7 +3,6 @@ function goToContactMe() {
     contact.scrollIntoView();
 }
 
-
 function scroll(hrefId, containerId) {
     let href = document.getElementById(hrefId);
     href.addEventListener('click', ev => {
@@ -14,7 +13,6 @@ function scroll(hrefId, containerId) {
         document.documentElement.scrollTo(rect.left, rect.top);
     })
 }
-
 
 scroll("about", "aboutContainer");
 scroll("studies", "studiesContainer");
@@ -29,11 +27,9 @@ scroll("upPortofolio", "containerHeader");
 scroll("upContact", "containerHeader");
 scroll("upHobbies", "containerHeader");
 
-
 function downloadMyCV(downloadBtn) {
     let button = document.getElementById(downloadBtn);
     button.addEventListener('click', ev => {
-        console.log('print');
         ev.preventDefault();
         window.print();
     })
@@ -47,4 +43,17 @@ function goToGmail() {
     window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
 }
 
-var scroll = new SmoothScroll('a[href*="#"]');
+
+// Email.send({
+//     SecureToken: "370445bb-bd67-40c2-bd85-ed5f337fea14",
+
+//     // Host: "smtp.yourisp.com",
+//     // Username: "username",
+//     // Password: "password",
+//     To: 'mihaela.iliescu1708@yahoo.com',
+//     From: "mihaela.wawa@gmail.com",
+//     Subject: "This is the subject",
+//     Body: "And this is the body"
+// }).then(
+//     message => alert(message)
+// );

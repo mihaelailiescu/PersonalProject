@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
     <link type="text/css" rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
@@ -18,7 +18,6 @@
 
     <header>
         <div class="container" id="containerHeader">
-            <!-- <div class="row1"> -->
             <div class="navbar">
                 <ul>
                     <li><a href="" class="active">Home</a> </li>
@@ -30,7 +29,6 @@
                     <li><a href="" id="contact">Contact</a> </li>
                 </ul>
             </div>
-            <!-- </div> -->
         </div>
     </header>
 
@@ -48,9 +46,7 @@
                         <div class="btn">
                             <a href="" id="downloadBtn" class="animate__animated animate__heartBeat">Download CV</a>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -69,7 +65,7 @@
             </p>
         </div>
         <br>
-        <div class="row">
+        <div class="row2">
             <div class="column">
                 <p><span>Birthday:</span> 1 June 1996</p>
                 <p><span>Age:</span> 24</p>
@@ -87,7 +83,9 @@
                 <button class="aboutDBtn" id="aboutDBtn">Download CV</button>
                 <button onclick="goToContactMe()" class="aboutHBtn">Hire Me</button>
             </div>
-            <img src="assets/up.png" id="upAbout">
+            <div class="arrowAbout">
+                <img src="assets/up.png" id="upAbout">
+            </div>
         </div>
         <br></br>
         <!-- End About me  -->
@@ -118,7 +116,9 @@
                     about rural tourism in Romania.</p>
             </div>
             <br></br>
-            <img src="assets/up.png" id="upStudies">
+            <div class="arrowStudies">
+                <img src="assets/up.png" id="upStudies">
+            </div>
         </div>
         <br></br>
         <!-- End Studies  -->
@@ -145,7 +145,9 @@
                 <img src="assets/creativity.PNG">
             </div>
             <br></br>
-            <img src="assets/up.png" id="upSkills">
+            <div class="arrowSkills">
+                <img src="assets/up.png" id="upSkills">
+            </div>
         </div>
         <br></br>
         <!-- End Skills  -->
@@ -154,30 +156,33 @@
         <div class="portofolio" id="portofolioContainer">
             <h1>Portofolio</h1>
             <br>
+            <h4><span>Click the photos</span> <span>to see the demo</span></h4>
             <div class="portofolioColumns">
                 <div class="column">
                     <h5>PopWatch</h5>
                     <br>
                     <a href="https://github.com/mihaelailiescu/PopWatch"> <img class="git" src="assets/git.png"></a>
                     <br></br>
-                    <a href="http://127.0.0.1:5508/pages/home.html"> <img src="assets/popWatch.PNG"></a>
+                    <a href="https://www.loom.com/share/993e3ae0d9a847d6b60849312dc49c61"> <img src="assets/popWatch.PNG"></a>
                 </div>
                 <div class="column">
                     <h5>GamesApp</h5>
                     <br>
                     <a href="https://github.com/mihaelailiescu/GamesApp"> <img class="git" src="assets/git.png"></a>
                     <br></br>
-                    <img src="assets/gamesApp.PNG">
+                    <a href="https://www.loom.com/share/f2184c8c58c044ab9aca078d549f93bc"> <img src="assets/gamesApp.PNG"> </a>
                 </div>
                 <div class="column">
                     <h5>PlayerApp</h5>
                     <br>
                     <a href="https://github.com/mihaelailiescu/PlayerApp"> <img class="git" src="assets/git.png"></a>
                     <br></br>
-                    <img src="assets/playerApp.PNG">
+                    <a href="https://www.loom.com/share/e015acb273d14f0ca8749296201f8730"> <img src="assets/playerApp.PNG"></a>
                 </div>
             </div>
-            <img src="assets/up.png" id="upPortofolio">
+            <div class="arrowPortofolio">
+                <img src="assets/up.png" id="upPortofolio">
+            </div>
         </div>
         <br></br>
         <!-- end portofolio  -->
@@ -195,7 +200,9 @@
                 <img src="assets/wsimming.PNG">
             </div>
             <br></br>
-            <img src="assets/up.png" id="upHobbies">
+            <div class="arrowHobbies">
+                <img src="assets/up.png" id="upHobbies">
+            </div>
         </div>
         <br></br>
         <!-- End Hobbies -->
@@ -227,7 +234,9 @@
                     </a>
                 </div>
             </div>
-            <img src="assets/up.png" id="upContact">
+            <div class="arrowContact">
+                <img src="assets/up.png" id="upContact">
+            </div>
         </div>
         <br></br>
         <!-- End contact  -->
@@ -247,8 +256,9 @@
 
         <!-- end Footer -->
 
-
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
         <script src="functionality.js"></script>
+
 
 </body>
 
