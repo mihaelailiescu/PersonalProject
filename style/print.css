@@ -1,0 +1,49 @@
+@media print {
+    nav,
+    .aboutDBtn,
+    .aboutHBtn,
+    .arrow img,
+    .portofolio h4,
+    footer {
+        display: none;
+    }
+    /* nu merge */
+    .home .block .btn {
+        color: transparent;
+    }
+    .aboutMe p,
+    .studies p {
+        font-size: 15px;
+    }
+    .studies h1,
+    .aboutMe h1,
+    .skills h1,
+    .skills h3 {
+        font-size: 25px;
+    }
+    .aboutMe .aboutText h3 {
+        font-size: 20px;
+    }
+    .studies strong,
+    .studies value {
+        font-size: 18px;
+    }
+    .skills .professionalSkills img,
+    .hobbiesContainer img {
+        width: 120px;
+        height: 120px;
+        margin-left: 0px;
+    }
+    .skills img {
+        width: 120px;
+        height: 120px;
+    }
+    .portofolio .column img {
+        width: 170px;
+        height: 120px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

@@ -1,0 +1,25 @@
+footer {
+    background-color: #555;
+    color: transparent;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FAC70C;
+}
+
+.ftSocial {
+    align-self: center;
+}
+
+.ftSocialList {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.ftSocialList li {
+    margin: 8px;
+    font-size: 20px;
+}

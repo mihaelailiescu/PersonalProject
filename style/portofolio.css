@@ -1,0 +1,45 @@
+.portofolioColumns {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.portofolioColumns h5 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.portofolio h4 {
+    margin: 0;
+    font-size: 30px;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-shadow: 0 0.1em 20px rgb(194, 191, 3), 0.05em -0.03em 0 rgb(167, 164, 5), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+.portofolio .column .git {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+}
+
+.portofolio .column img {
+    width: 250px;
+    height: 150px;
+}
+
+.portofolio .column img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.portofolio .column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,42 @@
+.skills h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.skills h3 {
+    font-size: 40px;
+    /* font-weight: 600; */
+    font-weight: bold;
+    color: orangered;
+}
+
+.skills img {
+    border-radius: 15px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.skills img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.skills .professionalSkills img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.skills .professionalSkills {
+    margin-left: 200px;
+}
+
+.skills .personalSkills {
+    margin-left: 50px;
+}
