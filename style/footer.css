@@ -9,10 +9,6 @@ footer a {
     color: #FAC70C;
 }
 
-.ftSocial {
-    align-self: center;
-}
-
 .ftSocialList {
     display: flex;
     justify-content: center;
@@ -21,5 +17,4 @@ footer a {
 
 .ftSocialList li {
     margin: 8px;
-    font-size: 20px;
 }

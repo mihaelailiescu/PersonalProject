@@ -202,49 +202,52 @@
         <section class="contactMe" id="contactMe">
             <h1><span>Contact</span><span> Me</span></h1>
             <br>
-            <!-- <div class="contactMeColumns">
-                <div class="column">
-                    <i class="fas fa-phone"></i>
-                    <span> <p>Phone me:</p></span>
-                    <p>0765289904</p>
+            <div class="formContainer">
+                <!-- <form action="https://api.slapform.com/mihaela.iliescu1708@yahoo.com" method="POST" class="contactForm">
 
-                </div>
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your first name..">
+                    <br>
 
-                <div class="column">
-                    <i class="fas fa-paper-plane" onclick=goToGmail()></i>
-                    <span> <p> Mail me:</p></span>
-                    <p onclick=goToGmail()><a href="#" target="_blank"> mihaela.iliescu1708@yahoo.com</a></p>
-                   
-                </div>
+                    <label for="lastName">Last name*</label>
+                    <input type="text" id="lname" name="lname" placeholder="Your last name..">
+                    <br>
 
-                <div class="column">
-                    <a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <span>  <p>See my LinkedIn profile:</p></span>
-                    <a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/" target="_blank">
-                        <p>Mihaela Marilena Iliescu</p>
-                    </a>
-                </div>
-            </div> -->
+                    <label for="email">Email*</label>
+                    <input type="text" id="email" name="email" data-validate="Valid email is required: ex@abc.xyz" placeholder="Your email address..">
+                    <br>
 
-            <form action="" class="contactForm">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="number" id="phoneN" name="phone" placeholder="Your phone number..">
+                    <br>
 
-                <label for="firstName">Enter your first name</label>
-                <input type="text" id="fname" name="fname" placeholder="Your first name..">
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" placeholder="Write something.."></textarea>
+                    <br>
 
-                <label for="lastName">Enter your last name</label>
-                <input type="text" id="lname" name="lname" placeholder="Your last name..">
+                    <button class="submitBtn">Submit your message</button>
+                </form> -->
 
-                <label for="email">Enter your email</label>
-                <input type="text" id="email" name="email" placeholder="Your email address..">
+                <form method="POST" action="https://api.slapform.com/mihaela.iliescu1708@yahoo.com" target="_blank">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your first name..">
+                    <br>
+                    <label for="lastName">Last name*</label>
+                    <input type="text" id="lname" name="lname" placeholder="Your last name..">
+                    <br>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address..">
+                    <br>
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="number" id="phoneN" name="phone" placeholder="Your phone number..">
+                    <br>
+                    <label for="message">Message*</label>
+                    <textarea type="text" id="message" name="message" placeholder="Write something.."></textarea>
+                    <br>
+                    <button type="submit" class="submitBtn">Submit</button>
+                </form>
+            </div>
 
-                <label for="phoneNumber">Enter your phone number</label>
-                <input type="number" id="phoneN" name="phone" placeholder="Your phone number..">
-
-                <label for="message">Your message</label>
-                <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
             <div class="arrow">
                 <img src="assets/up.png" class="arrowImg">
             </div>
