@@ -113,3 +113,104 @@ document.querySelector(".submitBtn").addEventListener("click", function(event) {
 })
 
 // form validation end
+
+// start carousel 
+
+let slideIndex = 1;
+showSlides(slideIndex, "mySlides");
+showSlides(slideIndex, "mySlidesFood");
+showSlides(slideIndex, "mySlidesMovies");
+
+function plusSlides(n) {
+    showSlides(slideIndex += n, "mySlides");
+    showSlides(slideIndex, "mySlidesFood");
+    showSlides(slideIndex, "mySlidesMovies");
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n, "mySlides");
+    showSlides(slideIndex, "mySlidesFood");
+    showSlides(slideIndex, "mySlidesMovies");
+}
+
+function showSlides(n, containerClass) {
+    let i;
+    let slides = document.getElementsByClassName(containerClass);
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+function showGallery() {
+    const gallery = document.getElementById("carouselContainerId");
+    gallery.style.display = "initial";
+    const dots = document.getElementById("dots");
+    dots.style.display = "initial";
+}
+
+function showFoodGallery() {
+    const galleryFood = document.getElementById("carouselFoodId");
+    galleryFood.style.display = "initial";
+    const dots = document.getElementById("dots");
+    dots.style.display = "initial";
+}
+
+function showMoviesGallery() {
+    const galleryMovies = document.getElementById("carouselMovieId");
+    galleryMovies.style.display = "initial";
+    const dots = document.getElementById("dots");
+    dots.style.display = "initial";
+}
+
+function showMusicGallery() {
+    const gallery = document.getElementById("musicContainer");
+    gallery.style.display = "initial";
+    const headline = document.getElementById("music");
+    headline.style.display = "initial";
+}
+
+function closeTheGallery() {
+    const gallery = document.getElementById("carouselContainerId");
+    gallery.style.display = "none";
+    const dots = document.getElementById("dots");
+    dots.style.display = "none";
+}
+
+function closeFoodGallery() {
+    const gallery = document.getElementById("carouselFoodId");
+    gallery.style.display = "none";
+    const dots = document.getElementById("dots");
+    dots.style.display = "none";
+}
+
+function closeMoviesGallery() {
+    const gallery = document.getElementById("carouselMovieId");
+    gallery.style.display = "none";
+    const dots = document.getElementById("dots");
+    dots.style.display = "none";
+}
+
+function closeMusicGallery() {
+    const gallery = document.getElementById("musicContainer");
+    gallery.style.display = "none";
+    // const headline = document.getElementById("music");
+    // headline.style.display = "none";
+}
+
+
+// document.querySelector("exitMusic").addEventListener('click', function(event) {
+//         event.preventDefault();
+//         const gallery = document.getElementById("musicContainer");
+//         gallery.style.display = "none";
+//         const headline = document.getElementById("music");
+//         headline.style.display = "none";
+//     })
+// end carousel

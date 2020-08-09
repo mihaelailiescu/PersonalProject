@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -184,72 +185,164 @@
             <br></br>
 
             <div class="hobbiesContainer">
-                <img src="assets/cooking.PNG">
-                <img src="assets/movies.PNG">
-                <img src="assets/music.PNG">
-                <img src="assets/photography.PNG">
-                <img src="assets/wsimming.PNG">
+                <img src="assets/cooking.PNG" onclick="showFoodGallery()">
+                <img src="assets/movies.PNG" onclick="showMoviesGallery()">
+                <img src="assets/music.PNG" onclick="showMusicGallery()">
+                <img src="assets/photography.PNG" onclick="showGallery()">
+
             </div>
             <br></br>
-            <div class="arrow">
-                <img src="assets/up.png" class="arrowImg">
+
+            <!-- Start gallery  -->
+            <div class="slideshow-container" id="carouselContainerId" style="display: none;">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="assets/gallery/1.jpg" style="width:100%">
+                    <div class="text" id="chirstmasMarket">Cluj-Napoca Christmas Market</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="assets/gallery/2.jpg" style="width:100%">
+                    <div class="text" id="streetFood">Street Food Festival</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="assets/gallery/3.jpg" style="width:100%">
+                    <div class="text" id="lake">The Blue Lake </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="assets/gallery/4.jpg" style="width:100%">
+                    <div class="text" id="italy">Italy </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="assets/gallery/5.jpg" style="width:100%">
+                    <div class="text" id="park">Cluj-Napoca Central Park </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="exit" onclick="closeTheGallery()">&#10005;</a>
+
+            </div>
+            <br>
+            <!-- End gallery  -->
+
+            <!-- Start Food Gallery -->
+            <div class="slideshow-container-food" id="carouselFoodId" style="display: none;">
+
+                <div class="mySlidesFood fade">
+                    <div class="numbertextF">1 / 5</div>
+                    <img src="assets/food/1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlidesFood fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="assets/food/2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlidesFood fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="assets/food/3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlidesFood fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="assets/food/4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlidesFood fade">
+                    <div class="numbertextF">5 / 5</div>
+                    <img src="assets/gallery/3.jpg" style="width:100%">
+                </div>
+
+                <a class="prevF" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="nextF" onclick="plusSlides(1)">&#10095;</a>
+                <a class="exitF" onclick="closeFoodGallery()">&#10005;</a>
+
+            </div>
+            <br>
+            <!-- End Food Gallery -->
+
+
+            <!-- Start Movie Gallery -->
+            <div class="slideshow-container-movies" id="carouselMovieId" style="display: none;">
+
+                <div class="mySlidesMovies fade">
+                    <div class="numbertextM">1 / 2</div>
+                    <img src="assets/movies/judge.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlidesMovies fade">
+                    <div class="numbertextM">2 / 2</div>
+                    <img src="assets/movies/interstellar.jpg" style="width:100%">
+                </div>
+
+                <a class="prevM" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="nextM" onclick="plusSlides(1)">&#10095;</a>
+                <a class="exitM" onclick="closeMoviesGallery()">&#10005;</a>
+
+            </div>
+            <br>
+            <!-- End Movie Gallery -->
+
+            <!-- Start Music Gallery -->
+            <div id="musicContainer">
+                <h1 id="music" style="display: none;">No gallery for this item</h1>
+                <!-- <button type="submit " class="exitMusic " onclick="closeMusicGallery()">Close</button> -->
+                <!-- <a class="exitMusic" onclick="closeMusicGallery()">&#10005;</a> -->
+            </div>
+            <!-- End Music Gallery -->
+
+
+            <div style="text-align:center" id="dots" style="display: none;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <div class="arrow ">
+                <img src="assets/up.png " class="arrowImg ">
             </div>
         </section>
         <br></br>
         <!-- End Hobbies -->
 
         <!-- Start contact  -->
-        <section class="contactMe" id="contactMe">
+        <section class="contactMe " id="contactMe ">
             <h1><span>Contact</span><span> Me</span></h1>
             <br>
-            <div class="formContainer">
-                <!-- <form action="https://api.slapform.com/mihaela.iliescu1708@yahoo.com" method="POST" class="contactForm">
-
-                    <label for="firstName">First Name*</label>
-                    <input type="text" id="fname" name="fname" placeholder="Your first name..">
+            <div class="formContainer ">
+                <form method="POST " action="https://api.slapform.com/mihaela.iliescu1708@yahoo.com " target="_blank ">
+                    <label for="firstName ">First Name*</label>
+                    <input type="text " id="fname " name="fname " placeholder="Your first name.. ">
                     <br>
-
-                    <label for="lastName">Last name*</label>
-                    <input type="text" id="lname" name="lname" placeholder="Your last name..">
+                    <label for="lastName ">Last name*</label>
+                    <input type="text " id="lname " name="lname " placeholder="Your last name.. ">
                     <br>
-
-                    <label for="email">Email*</label>
-                    <input type="text" id="email" name="email" data-validate="Valid email is required: ex@abc.xyz" placeholder="Your email address..">
+                    <label for="email ">Email*</label>
+                    <input type="email " id="email " name="email " placeholder="Your email address.. ">
                     <br>
-
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="number" id="phoneN" name="phone" placeholder="Your phone number..">
+                    <label for="phoneNumber ">Phone Number</label>
+                    <input type="number " id="phoneN " name="phone " placeholder="Your phone number.. ">
                     <br>
-
-                    <label for="message">Message*</label>
-                    <textarea id="message" name="message" placeholder="Write something.."></textarea>
+                    <label for="message ">Message*</label>
+                    <textarea type="text " id="message " name="message " placeholder="Write something.. "></textarea>
                     <br>
-
-                    <button class="submitBtn">Submit your message</button>
-                </form> -->
-
-                <form method="POST" action="https://api.slapform.com/mihaela.iliescu1708@yahoo.com" target="_blank">
-                    <label for="firstName">First Name*</label>
-                    <input type="text" id="fname" name="fname" placeholder="Your first name..">
-                    <br>
-                    <label for="lastName">Last name*</label>
-                    <input type="text" id="lname" name="lname" placeholder="Your last name..">
-                    <br>
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address..">
-                    <br>
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="number" id="phoneN" name="phone" placeholder="Your phone number..">
-                    <br>
-                    <label for="message">Message*</label>
-                    <textarea type="text" id="message" name="message" placeholder="Write something.."></textarea>
-                    <br>
-                    <button type="submit" class="submitBtn">Submit</button>
+                    <button type="submit " class="submitBtn ">Submit</button>
                 </form>
             </div>
 
-            <div class="arrow">
-                <img src="assets/up.png" class="arrowImg">
+            <div class="arrow ">
+                <img src="assets/up.png " class="arrowImg ">
             </div>
         </section>
         <br></br>
@@ -258,19 +351,20 @@
 
         <!-- Start Footer -->
         <footer>
-            <section class="ftSocial">
-                <ul class="ftSocialList">
-                    <li><a href="https://www.facebook.com/mihaela.wawa" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/mihaelaai/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/mihaelailiescu" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <section class="ftSocial ">
+                <ul class="ftSocialList ">
+                    <li><a href="https://www.facebook.com/mihaela.wawa " target="_blank "><i class="fab fa-facebook "></i></a></li>
+                    <li><a href="https://www.instagram.com/mihaelaai/?hl=en " target="_blank "><i class="fab fa-instagram "></i></a></li>
+                    <li><a href="https://github.com/mihaelailiescu " target="_blank "><i class="fab fa-github "></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/mihaela-marilena-iliescu-654190170/ " target="_blank "><i class="fab fa-linkedin "></i></a></li>
                 </ul>
             </section>
         </footer>
 
         <!-- end Footer -->
-
-        <script src="functionality.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js "></script> -->
+        <script src="functionality.js "></script>
 
 </body>
 

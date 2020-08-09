@@ -6,7 +6,7 @@
     width: 170px;
     height: 170px;
     border-radius: 15px;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .hobbiesContainer img {
@@ -25,5 +25,171 @@
     80%,
     100% {
         transform: scale(1) rotateZ(-3deg);
+    }
+}
+
+.hobbies {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#chirstmasMarket {
+    color: black;
+    font-size: 25px;
+    background-color: ivory;
+    position: relative;
+    margin-bottom: 0;
+}
+
+#streetFood,
+#lake,
+#italy,
+#park {
+    font-size: 25px;
+}
+
+.slideshow-container,
+.slideshow-container-food,
+.slideshow-container-movies {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next,
+.prevF,
+.nextF,
+.prevM,
+.nextM {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.exit,
+.exitF,
+.exitM {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    width: auto;
+    padding: 16px;
+    color: red;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.exitMusic {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    width: auto;
+    padding: 16px;
+    color: red;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next,
+.nextF,
+.nextM {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover,
+.prevF:hover,
+.nextF:hover,
+.prevM:hover,
+.nextM:hover,
+.exit:hover,
+.exitF:hover,
+.exitM:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext,
+.numbertextF,
+.numbertextM {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
     }
 }
