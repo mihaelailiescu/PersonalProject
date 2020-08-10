@@ -1,12 +1,15 @@
 .formContainer {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     background-color: darkgrey;
     border: 5px solid #555;
 }
 
 .formContainer form {
+    align-content: center;
     margin: 25px 25px 0px 25px;
+    height: 330px;
 }
 
 .formContainer form textarea {
@@ -39,7 +42,8 @@
 }
 
 .contactMe h1 span,
-.portofolio h4 span {
+.portofolio h4 span,
+.hobbies h4 span {
     transform: scale(0.9);
     display: inline-block;
 }

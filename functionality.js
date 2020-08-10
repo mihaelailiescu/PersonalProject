@@ -34,16 +34,17 @@ function downloadMyCV(downloadBtn) {
 downloadMyCV("downloadBtn");
 downloadMyCV("aboutDBtn");
 
-function goToGmail() {
-    location.href = "mailto:mihaela.iliescu1708@yahoo.com&body=Hello!";
-    window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
-}
+// function goToGmail() {
+//     location.href = "mailto:mihaela.iliescu1708@yahoo.com&body=Hello!";
+//     window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
+// }
 
 // form validation start 
+
 function validateName(inputElement, errorMessage) {
     if (inputElement.value.length < 3 || inputElement.value === "") {
         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
-            inputElement.style.border = "3px solid red"
+            inputElement.style.border = "3px solid red";
             buildErrorMessage(inputElement, errorMessage);
         }
     } else {
@@ -67,12 +68,6 @@ function validateEmail(inputElement, errorMessage) {
         }
     }
 }
-
-// const validate = (email) => {
-//     const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
-
-//     return expression.test(String(email).toLowerCase())
-// }
 
 function validateMessage(inputElement, errorMessage) {
     if (inputElement.value.length < 15 || inputElement.value === "") {
@@ -109,72 +104,136 @@ document.querySelector(".submitBtn").addEventListener("click", function(event) {
     validateName(lastName, "The last name is required!");
     validateEmail(email, "The email is required!");
     validateMessage(message, "The message is required!");
-
 })
+
+// function validateName(inputElement, errorMessage) {
+//     if (inputElement.value.length < 3 || inputElement.value === "") {
+//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             inputElement.style.border = "3px solid red"
+//             buildErrorMessage(inputElement, errorMessage);
+//         }
+//     } else {
+//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
+//             inputElement.classList.remove("inputError");
+//         }
+//     }
+// }
+
+// function validateEmail(inputElement, errorMessage) {
+//     if (inputElement.value.length < 4 || inputElement.value === "") {
+//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             inputElement.style.border = "3px solid red"
+//             buildErrorMessage(inputElement, errorMessage);
+//         }
+//     } else {
+//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
+//             inputElement.classList.remove("inputError");
+//         }
+//     }
+// }
+
+// function validateMessage(inputElement, errorMessage) {
+//     if (inputElement.value.length < 15 || inputElement.value === "") {
+//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             inputElement.style.border = "3px solid red"
+//             buildErrorMessage(inputElement, errorMessage);
+//         }
+//     } else {
+//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
+//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
+//             inputElement.classList.remove("inputError");
+//         }
+//     }
+// }
+
+// function buildErrorMessage(inputEl, errorMsg) {
+//     inputEl.classList.add("inputError");
+//     const errorMsgElement = document.createElement("span");
+//     errorMsgElement.setAttribute("rel", inputEl.id);
+//     errorMsgElement.classList.add("errorMsg");
+//     errorMsgElement.innerHTML = errorMsg;
+//     inputEl.after(errorMsgElement);
+// }
+
+// document.querySelector(".submitBtn").addEventListener("click", function(event) {
+//     event.preventDefault();
+
+//     const firstName = document.getElementById("fname");
+//     const lastName = document.getElementById("lname");
+//     const email = document.getElementById("email");
+//     const message = document.getElementById("message");
+
+//     validateName(firstName, "The first name is required!");
+//     validateName(lastName, "The last name is required!");
+//     validateEmail(email, "The email is required!");
+//     validateMessage(message, "The message is required!");
+
+// })
 
 // form validation end
 
 // start carousel 
 
 let slideIndex = 1;
-showSlides(slideIndex, "mySlides");
-showSlides(slideIndex, "mySlidesFood");
-showSlides(slideIndex, "mySlidesMovies");
+let gStart = 0;
+let gEnd = 0;
 
 function plusSlides(n) {
-    showSlides(slideIndex += n, "mySlides");
-    showSlides(slideIndex, "mySlidesFood");
-    showSlides(slideIndex, "mySlidesMovies");
+    slideIndex += n;
+    showSlides("mySlides");
 }
 
 function currentSlide(n) {
-    showSlides(slideIndex = n, "mySlides");
-    showSlides(slideIndex, "mySlidesFood");
-    showSlides(slideIndex, "mySlidesMovies");
+    slideIndex = gStart + n - 1;
+    showSlides("mySlides");
 }
 
-function showSlides(n, containerClass) {
+function showSlides(containerClass) {
+
     let i;
     let slides = document.getElementsByClassName(containerClass);
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
+
+    if (slideIndex > gEnd) { slideIndex = gStart }
+    if (slideIndex < gStart) { slideIndex = gEnd }
+
+    console.log("displaying after adjustments", slideIndex);
+
+    for (i = gStart - 1; i < gEnd; i++) {
+        console.log(i);
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    dots[(slideIndex - 1) % 5].className += " active";
+
+    const headline = document.getElementById("noGallery");
+    headline.style.display = "none";
 }
 
-function showGallery() {
+function showGalleryRange(start, end) {
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    gStart = start;
+    gEnd = end;
+    console.log(gStart, gEnd);
+
+    // Make sure the slides container is visible
     const gallery = document.getElementById("carouselContainerId");
     gallery.style.display = "initial";
-    const dots = document.getElementById("dots");
-    dots.style.display = "initial";
-}
+    const dot = document.getElementById("dots");
+    dot.style.display = "initial";
 
-function showFoodGallery() {
-    const galleryFood = document.getElementById("carouselFoodId");
-    galleryFood.style.display = "initial";
-    const dots = document.getElementById("dots");
-    dots.style.display = "initial";
-}
-
-function showMoviesGallery() {
-    const galleryMovies = document.getElementById("carouselMovieId");
-    galleryMovies.style.display = "initial";
-    const dots = document.getElementById("dots");
-    dots.style.display = "initial";
-}
-
-function showMusicGallery() {
-    const gallery = document.getElementById("musicContainer");
-    gallery.style.display = "initial";
-    const headline = document.getElementById("music");
-    headline.style.display = "initial";
+    slideIndex = gStart;
+    showSlides("mySlides");
 }
 
 function closeTheGallery() {
@@ -184,33 +243,22 @@ function closeTheGallery() {
     dots.style.display = "none";
 }
 
-function closeFoodGallery() {
-    const gallery = document.getElementById("carouselFoodId");
-    gallery.style.display = "none";
-    const dots = document.getElementById("dots");
-    dots.style.display = "none";
+function noGallery() {
+
+    document.getElementById("cooking").addEventListener('click', ev => {
+        ev.preventDefault();
+
+        const gallery = document.getElementById("noGallery");
+        gallery.style.display = "initial";
+
+    })
+
+    document.getElementById("music").addEventListener('click', ev => {
+        ev.preventDefault();
+
+        const gallery = document.getElementById("noGallery");
+        gallery.style.display = "initial";
+
+    })
 }
-
-function closeMoviesGallery() {
-    const gallery = document.getElementById("carouselMovieId");
-    gallery.style.display = "none";
-    const dots = document.getElementById("dots");
-    dots.style.display = "none";
-}
-
-function closeMusicGallery() {
-    const gallery = document.getElementById("musicContainer");
-    gallery.style.display = "none";
-    // const headline = document.getElementById("music");
-    // headline.style.display = "none";
-}
-
-
-// document.querySelector("exitMusic").addEventListener('click', function(event) {
-//         event.preventDefault();
-//         const gallery = document.getElementById("musicContainer");
-//         gallery.style.display = "none";
-//         const headline = document.getElementById("music");
-//         headline.style.display = "none";
-//     })
 // end carousel

@@ -9,7 +9,8 @@
     font-size: 25px;
 }
 
-.portofolio h4 {
+.portofolio h4,
+.hobbies h4 {
     margin: 0;
     font: 30px 'Amatic SC', cursive;
     padding: 0;

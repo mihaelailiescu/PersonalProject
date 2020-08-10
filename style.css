@@ -68,7 +68,7 @@ header ul li a:hover::before {
     left: 0;
 }
 
-header ul li a.active::before {
+header ul li a.active1::before {
     width: 100%;
     left: 0;
 }
