@@ -1,3 +1,5 @@
+// const { documentai } = require("googleapis/build/src/apis/documentai");
+
 function goToContactMe() {
     var contact = document.getElementById("contactMe");
     contact.scrollIntoView();
@@ -33,11 +35,6 @@ function downloadMyCV(downloadBtn) {
 
 downloadMyCV("downloadBtn");
 downloadMyCV("aboutDBtn");
-
-// function goToGmail() {
-//     location.href = "mailto:mihaela.iliescu1708@yahoo.com&body=Hello!";
-//     window.setTimeout(function() { location.href = "https://mail.google.com/" }, 0);
-// }
 
 // form validation start 
 
@@ -105,72 +102,6 @@ document.querySelector(".submitBtn").addEventListener("click", function(event) {
     validateEmail(email, "The email is required!");
     validateMessage(message, "The message is required!");
 })
-
-// function validateName(inputElement, errorMessage) {
-//     if (inputElement.value.length < 3 || inputElement.value === "") {
-//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             inputElement.style.border = "3px solid red"
-//             buildErrorMessage(inputElement, errorMessage);
-//         }
-//     } else {
-//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
-//             inputElement.classList.remove("inputError");
-//         }
-//     }
-// }
-
-// function validateEmail(inputElement, errorMessage) {
-//     if (inputElement.value.length < 4 || inputElement.value === "") {
-//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             inputElement.style.border = "3px solid red"
-//             buildErrorMessage(inputElement, errorMessage);
-//         }
-//     } else {
-//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
-//             inputElement.classList.remove("inputError");
-//         }
-//     }
-// }
-
-// function validateMessage(inputElement, errorMessage) {
-//     if (inputElement.value.length < 15 || inputElement.value === "") {
-//         if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             inputElement.style.border = "3px solid red"
-//             buildErrorMessage(inputElement, errorMessage);
-//         }
-//     } else {
-//         if (document.querySelector('[rel="' + inputElement.id + '"]')) {
-//             document.querySelector('[rel="' + inputElement.id + '"]').remove();
-//             inputElement.classList.remove("inputError");
-//         }
-//     }
-// }
-
-// function buildErrorMessage(inputEl, errorMsg) {
-//     inputEl.classList.add("inputError");
-//     const errorMsgElement = document.createElement("span");
-//     errorMsgElement.setAttribute("rel", inputEl.id);
-//     errorMsgElement.classList.add("errorMsg");
-//     errorMsgElement.innerHTML = errorMsg;
-//     inputEl.after(errorMsgElement);
-// }
-
-// document.querySelector(".submitBtn").addEventListener("click", function(event) {
-//     event.preventDefault();
-
-//     const firstName = document.getElementById("fname");
-//     const lastName = document.getElementById("lname");
-//     const email = document.getElementById("email");
-//     const message = document.getElementById("message");
-
-//     validateName(firstName, "The first name is required!");
-//     validateName(lastName, "The last name is required!");
-//     validateEmail(email, "The email is required!");
-//     validateMessage(message, "The message is required!");
-
-// })
 
 // form validation end
 
@@ -262,3 +193,32 @@ function noGallery() {
     })
 }
 // end carousel
+
+
+
+emailjs.init("user_LWn4xxk8SKobQTJ6NlWRs"); //please encrypted user id for malicious attacks
+
+//set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+
+
+document.getElementById('submitBtn').addEventListener('click', () => {
+    var templateParams = {
+        to_name: 'mihaela.iliescu1708@yahoo.com',
+        from_name: 'mihaela.wawa@gmail.com',
+        message_html: document.getElementById('message').value,
+        senderEmail: document.getElementById('email').value,
+        name: document.getElementById('fname').value + " " + document.getElementById('lname').value,
+        number: document.getElementById('phoneN').value
+    };
+
+    emailjs.send('gmail', 'mycv', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+
+
+    alert("Hello! I received your message and I'll contact you soon. Thank you!");
+    document.getElementById("myForm").reset()
+})
