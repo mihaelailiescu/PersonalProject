@@ -1,13 +1,13 @@
 .formContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    flex-wrap: wrap;
     background-color: darkgrey;
     border: 5px solid #555;
 }
 
 .formContainer form {
-    align-content: center;
     margin: 25px 25px 0px 25px;
     height: 330px;
 }

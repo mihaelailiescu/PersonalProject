@@ -4,7 +4,8 @@
     .aboutHBtn,
     .arrow img,
     .portofolio h4,
-    footer {
+    footer,
+    .hobbies h4 {
         display: none;
     }
     .home .block .btn {
@@ -29,6 +30,9 @@
     .studies strong,
     .studies value {
         font-size: 18px;
+    }
+    .studies p {
+        font-size: 15px;
     }
     .skills .professionalSkills img,
     .hobbiesContainer img {

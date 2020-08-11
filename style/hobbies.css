@@ -30,7 +30,9 @@
 
 .hobbies {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #chirstmasMarket {

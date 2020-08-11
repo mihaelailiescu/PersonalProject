@@ -28,8 +28,9 @@ nav {
 
 header {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
     position: absolute;
     left: 0px;
     right: 0px;
@@ -80,12 +81,11 @@ header ul li a.active1::before {
     background-position: center;
     padding: 15px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .home .block {
-    flex: 0 0 75%;
     padding-left: 35px;
     border-left: 5px solid #ffffff;
     margin: 200px 0 0 80px;
@@ -101,15 +101,11 @@ header ul li a.active1::before {
 .home .block h1 {
     color: #ffffff;
     font-size: 60px;
-    margin: 0;
-    padding: 0;
 }
 
 .home .block h3 {
     color: #ffffff;
     font-size: 35px;
-    margin: 0;
-    padding: 0;
 }
 
 .home .block .btn {

@@ -1,8 +1,11 @@
 .aboutMe {
     background-color: lavenderblush;
     color: #2C2C2C;
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* position: relative; */
     padding: 20px;
     text-transform: initial;
 }

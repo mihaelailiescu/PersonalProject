@@ -1,3 +1,10 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .skills h1 {
     font-size: 60px;
 }

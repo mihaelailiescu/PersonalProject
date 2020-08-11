@@ -1,3 +1,10 @@
+.studies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .studies strong {
     color: #FAC70C;
     font-size: 30px;
