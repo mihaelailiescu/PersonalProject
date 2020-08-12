@@ -1,8 +1,8 @@
 .portofolioColumns {
     display: flex;
+    flex-direction: column;
     position: relative;
-    flex-flow: row wrap;
-    justify-content: center;
+    align-items: flex-start;
 }
 
 .portofolioColumns h5 {
@@ -24,9 +24,9 @@
     border-radius: 25px;
 }
 
-.portofolio .column img {
-    width: 250px;
-    height: 150px;
+.portofolio .column iframe {
+    width: 800px;
+    height: 400px;
 }
 
 .portofolio .column img:hover {
