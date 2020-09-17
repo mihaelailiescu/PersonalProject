@@ -1,5 +1,3 @@
-// const { documentai } = require("googleapis/build/src/apis/documentai");
-
 function goToContactMe() {
     var contact = document.getElementById("contactMe");
     contact.scrollIntoView();
